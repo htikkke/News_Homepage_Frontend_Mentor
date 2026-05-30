@@ -2,11 +2,160 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="./src/assets/favicon-32x32.png"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>news-homepage-newbie</title>
+    <title>Frontend Mentor | news-homepage-newbie</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body>
+  <body class="bg-body-background w-screen min-h-screen py-10 px-35 font-sans">
+    <div
+      class="w-full h-auto grid grid-rows-[auto,auto,auto]"
+      id="main-container"
+    >
+      <div id="nav-container" class="flex justify-between mb-8">
+        <div><img src="./src/assets/logo.svg" /></div>
+        <div class="flex items-center justify-center">
+          <nav class="flex gap-7">
+            <a
+              href="#"
+              class="text-text-color cursor-pointer hover:text-button-background"
+              >Home</a
+            >
+            <a
+              href="#"
+              class="text-text-color cursor-pointer hover:text-button-background"
+              >New</a
+            >
+            <a
+              href="#"
+              class="text-text-color cursor-pointer hover:text-button-background"
+              >Popular</a
+            >
+            <a
+              href="#"
+              class="text-text-color cursor-pointer hover:text-button-background"
+              >Trending</a
+            >
+            <a
+              href="#"
+              class="text-text-color cursor-pointer hover:text-button-background"
+              >Categories</a
+            >
+          </nav>
+        </div>
+      </div>
+      <div
+        id="news-container"
+        class="grid grid-cols-3 grid-rows-[auto,auto] gap-x-6 gap-y-4 mb-15"
+      >
+        <img src="./src/assets/image-web-3-desktop.jpg" class="col-[1/3]" />
+        <h1 class="col-[1/2] row-[2/3] font-bold text-6xl">
+          The Bright Future of Web 3.0?
+        </h1>
+        <div class="col-[2/3] row-[2/3]">
+          <p class="text-text-color text-sm/7">
+            We dive into the next evolution of the web that claims to put the
+            power of the platforms back into the hands of the people. But is it
+            really fulfilling its promise?
+          </p>
+          <button
+            class="mt-5 bg-button-background text-button-text px-5 py-3 text-[10px] font-extrabold tracking-[5px] cursor-pointer hover:text-white hover:bg-button-text"
+          >
+            READ MORE
+          </button>
+        </div>
+        <div class="col-[3/4] row-[1/3] bg-black p-10 flex flex-col gap-y-10">
+          <div>
+            <h1 class="text-gold text-3xl font-bold">New</h1>
+          </div>
+          <div class="border-b-text-color border-b pb-5">
+            <h1 class="text-white mb-text-color text-xl font-bold mb-2">
+              Hydrogen VS Electric Cars
+            </h1>
+            <p class="text-text-color border-b-white">
+              Will hydrogen-fueled cars ever catch up to EVs?
+            </p>
+          </div>
+          <div class="border-b-text-color border-b pb-5">
+            <h1 class="text-white text-xl font-bold mb-2">
+              The Downsides of AI Artistry
+            </h1>
+            <p class="text-text-color">
+              What are the possible adverse effects of on-demand AI image
+              generation?
+            </p>
+          </div>
+          <div class="pb-5">
+            <h1 class="text-white text-xl font-bold mb-2">
+              Is VC Funding Drying Up?
+            </h1>
+            <p class="text-text-color">
+              Private funding by VC firms is down 50% YOY. We take a look at
+              what that means.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        id="trending-container"
+        class="h-30 grid grid-cols-3 grid-rows-1 gap-5"
+      >
+        <div class="flex gap-5 rows-[1/2]">
+          <div class="basis-30%">
+            <img
+              src="./src/assets/image-retro-pcs.jpg"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div class="basis-3/5 flex flex-col justify-between">
+            <p class="text-button-background text-3xl font-bold">01</p>
+            <h2 class="text-black text-xl font-bold">Reviving Retro PCs</h2>
+            <p class="text-text-color text-sm">
+              What happens when old PCs are given modern upgrades?
+            </p>
+          </div>
+        </div>
+        <div class="flex gap-5 rows-[1/2]">
+          <div class="basis-30%">
+            <img
+              src="./src/assets/image-top-laptops.jpg"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div class="basis-3/5 flex flex-col justify-between">
+            <p class="text-button-background text-3xl font-bold">02</p>
+            <h2 class="text-black text-xl font-bold">Top 10 Laptops of 2022</h2>
+            <p class="text-text-color text-sm">
+              W Our best picks for various needs and budgets.
+            </p>
+          </div>
+        </div>
+        <div class="flex gap-5 rows-[1/2]">
+          <div>
+            <img
+              src="./src/assets/image-gaming-growth.jpg"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div class="flex flex-col justify-between">
+            <p class="text-button-background text-3xl font-bold">03</p>
+            <h2 class="text-black text-xl font-bold">The Growth of Gaming</h2>
+            <p class="text-text-color text-sm">
+              How the pandemic has sparked fresh opportunities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>

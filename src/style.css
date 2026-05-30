@@ -1,1 +1,9 @@
 @import "tailwindcss";
+@theme {
+  --color-body-background: hsl(36, 100%, 99%);
+  --color-text-color: hsl(236, 13%, 42%);
+  --color-button-background: hsl(5, 85%, 63%);
+  --color-button-text: hsl(240, 100%, 5%);
+  --color-gold: hsl(35, 77%, 62%);
+  --font-sans: "Inter", sans-serif;
+}
