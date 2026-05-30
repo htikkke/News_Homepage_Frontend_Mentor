@@ -16,15 +16,17 @@
       rel="stylesheet"
     />
   </head>
-  <body class="bg-body-background w-screen min-h-screen py-10 px-35 font-sans">
+  <body
+    class="bg-body-background w-screen min-h-screen py-10 px-35 font-sans max-[800px]:p-10"
+  >
     <div
-      class="w-full h-auto grid grid-rows-[auto,auto,auto]"
+      class="w-full h-auto grid grid-rows-[auto,auto,auto] max-[800px]:grid-rows-auto relative"
       id="main-container"
     >
       <div id="nav-container" class="flex justify-between mb-8">
         <div><img src="./src/assets/logo.svg" /></div>
         <div class="flex items-center justify-center">
-          <nav class="flex gap-7">
+          <nav class="flex gap-7 max-[500px]:hidden">
             <a
               href="#"
               class="text-text-color cursor-pointer hover:text-button-background"
@@ -51,17 +53,52 @@
               >Categories</a
             >
           </nav>
+          <div class="min-[501px]:hidden">
+            <img src="./src/assets/icon-menu.svg" id="menu-icon" />
+          </div>
+          <div
+            class="absolute top-0 w-full h-full bg-white hidden"
+            id="popup-menu"
+          >
+            <div class="relative">
+              <img
+                src="./src/assets/icon-menu-close.svg"
+                class="absolute top-0 right-30"
+                id="cross-icon"
+              />
+              <nav>
+                <a href="#" class="absolute top-30 left-10 text-xl">Home</a>
+                <a href="#" class="absolute top-45 left-10 text-xl">New</a>
+                <a href="#" class="absolute top-60 left-10 text-xl">Popular</a>
+                <a href="#" class="absolute top-75 left-10 text-xl">Trending</a>
+                <a href="#" class="absolute top-90 left-10 text-xl"
+                  >Categories</a
+                >
+              </nav>
+            </div>
+          </div>
         </div>
       </div>
       <div
         id="news-container"
-        class="grid grid-cols-3 grid-rows-[auto,auto] gap-x-6 gap-y-4 mb-15"
+        class="grid grid-cols-3 grid-rows-[auto,auto] gap-x-6 gap-y-4 mb-15 max-[800px]:grid-cols-1 max-[800px]:grid-rows-[auto,auto,auto,auto]"
       >
-        <img src="./src/assets/image-web-3-desktop.jpg" class="col-[1/3]" />
-        <h1 class="col-[1/2] row-[2/3] font-bold text-6xl">
+        <img
+          src="./src/assets/image-web-3-desktop.jpg"
+          class="col-[1/3] max-[800px]:col-[1/2] max-[800px]:row-[1/2] max-[500px]:hidden"
+        />
+        <img
+          src="./src/assets/image-web-3-mobile.jpg"
+          class="max-[500px]:col-[1/2] max-[500px]:row-[1/2] max-[500px]:block"
+        />
+        <h1
+          class="col-[1/2] row-[2/3] font-bold text-6xl max-[800px]:col-[1/2] max-[800px]:row-[2/3]"
+        >
           The Bright Future of Web 3.0?
         </h1>
-        <div class="col-[2/3] row-[2/3]">
+        <div
+          class="col-[2/3] row-[2/3] max-[800px]:col-[1/2] max-[800px]:row-[3/4]"
+        >
           <p class="text-text-color text-sm/7">
             We dive into the next evolution of the web that claims to put the
             power of the platforms back into the hands of the people. But is it
@@ -73,7 +110,9 @@
             READ MORE
           </button>
         </div>
-        <div class="col-[3/4] row-[1/3] bg-black p-10 flex flex-col gap-y-10">
+        <div
+          class="col-[3/4] row-[1/3] bg-black p-10 flex flex-col gap-y-10 max-[800px]:col-[1/2] max-[800px]:row-[4/5]"
+        >
           <div>
             <h1 class="text-gold text-3xl font-bold">New</h1>
           </div>
@@ -107,9 +146,11 @@
       </div>
       <div
         id="trending-container"
-        class="h-30 grid grid-cols-3 grid-rows-1 gap-5"
+        class="h-30 grid grid-cols-3 grid-rows-1 gap-5 max-[800px]:h-90 max-[800px]:grid-cols-1 max-[800px]:grid-rows-3"
       >
-        <div class="flex gap-5 rows-[1/2]">
+        <div
+          class="flex gap-5 rows-[1/2] max-[800px]:col-[1/2] max-[800px]:row-[1/2]"
+        >
           <div class="basis-30%">
             <img
               src="./src/assets/image-retro-pcs.jpg"
@@ -118,13 +159,17 @@
           </div>
           <div class="basis-3/5 flex flex-col justify-between">
             <p class="text-button-background text-3xl font-bold">01</p>
-            <h2 class="text-black text-xl font-bold">Reviving Retro PCs</h2>
-            <p class="text-text-color text-sm">
+            <h2 class="text-black text-xl font-bold max-[500px]:text-base">
+              Reviving Retro PCs
+            </h2>
+            <p class="text-text-color text-sm max-[500px]:text-xs">
               What happens when old PCs are given modern upgrades?
             </p>
           </div>
         </div>
-        <div class="flex gap-5 rows-[1/2]">
+        <div
+          class="flex gap-5 rows-[1/2] max-[800px]:col-[1/2] max-[800px]:row-[2/3]"
+        >
           <div class="basis-30%">
             <img
               src="./src/assets/image-top-laptops.jpg"
@@ -133,23 +178,29 @@
           </div>
           <div class="basis-3/5 flex flex-col justify-between">
             <p class="text-button-background text-3xl font-bold">02</p>
-            <h2 class="text-black text-xl font-bold">Top 10 Laptops of 2022</h2>
-            <p class="text-text-color text-sm">
+            <h2 class="text-black text-xl font-bold max-[500px]:text-base">
+              Top 10 Laptops of 2022
+            </h2>
+            <p class="text-text-color text-sm max-[500px]:text-xs">
               W Our best picks for various needs and budgets.
             </p>
           </div>
         </div>
-        <div class="flex gap-5 rows-[1/2]">
-          <div>
+        <div
+          class="flex gap-5 rows-[1/2] max-[800px]:col-[1/2] max-[800px]:row-[3/4]"
+        >
+          <div class="basis-30%">
             <img
               src="./src/assets/image-gaming-growth.jpg"
               class="w-full h-full object-cover"
             />
           </div>
-          <div class="flex flex-col justify-between">
+          <div class="basis-3/5 flex flex-col justify-between">
             <p class="text-button-background text-3xl font-bold">03</p>
-            <h2 class="text-black text-xl font-bold">The Growth of Gaming</h2>
-            <p class="text-text-color text-sm">
+            <h2 class="text-black text-xl font-bold max-[500px]:text-base">
+              The Growth of Gaming
+            </h2>
+            <p class="text-text-color text-sm max-[500px]:text-xs">
               How the pandemic has sparked fresh opportunities.
             </p>
           </div>
