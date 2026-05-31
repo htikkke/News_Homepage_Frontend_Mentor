@@ -57,21 +57,39 @@
             <img src="./src/assets/icon-menu.svg" id="menu-icon" />
           </div>
           <div
-            class="absolute top-0 w-full h-full bg-white hidden"
+            class="absolute top-0 w-full h-full bg-white hidden -mt-10"
             id="popup-menu"
           >
             <div class="relative">
               <img
                 src="./src/assets/icon-menu-close.svg"
-                class="absolute top-0 right-30"
+                class="absolute top-10 right-30"
                 id="cross-icon"
               />
               <nav>
-                <a href="#" class="absolute top-30 left-10 text-xl">Home</a>
-                <a href="#" class="absolute top-45 left-10 text-xl">New</a>
-                <a href="#" class="absolute top-60 left-10 text-xl">Popular</a>
-                <a href="#" class="absolute top-75 left-10 text-xl">Trending</a>
-                <a href="#" class="absolute top-90 left-10 text-xl"
+                <a
+                  href="#"
+                  class="absolute top-30 left-10 text-xl cursor-pointer hover:text-button-background"
+                  >Home</a
+                >
+                <a
+                  href="#"
+                  class="absolute top-45 left-10 text-xl cursor-pointer hover:text-button-background"
+                  >New</a
+                >
+                <a
+                  href="#"
+                  class="absolute top-60 left-10 text-xl cursor-pointer hover:text-button-background"
+                  >Popular</a
+                >
+                <a
+                  href="#"
+                  class="absolute top-75 left-10 text-xl cursor-pointer hover:text-button-background"
+                  >Trending</a
+                >
+                <a
+                  href="#"
+                  class="absolute top-90 left-10 text-xl cursor-pointer hover:text-button-background"
                   >Categories</a
                 >
               </nav>
@@ -89,7 +107,7 @@
         />
         <img
           src="./src/assets/image-web-3-mobile.jpg"
-          class="max-[500px]:col-[1/2] max-[500px]:row-[1/2] max-[500px]:block"
+          class="hidden max-[500px]:col-[1/2] max-[500px]:row-[1/2] max-[500px]:block"
         />
         <h1
           class="col-[1/2] row-[2/3] font-bold text-6xl max-[800px]:col-[1/2] max-[800px]:row-[2/3]"
